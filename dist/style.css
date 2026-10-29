@@ -1,24 +1,55 @@
+:root {
+  --bg: #15161a;
+  --text: #e8e8ec;
+  --box-bg: #23242b;
+  --box-border: #3a3b44;
+  --muted: #aaaab4;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin-left: 100px;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.2s, color 0.2s;
 }
 
 ol {
-  width: 400px;
+  width: 440px;
+  padding-left: 28px;
 }
 
 li {
   margin: 12px 0;
+  padding: 10px 14px;
+  background: var(--box-bg);
+  border: 1px solid var(--box-border);
+  border-radius: 12px;
+}
+
+li::marker {
+  color: var(--muted);
 }
 
 .task-text {
   display: inline-block;
-  width: 300px;
+  width: calc(100% - 40px);
+  vertical-align: middle;
 }
 
 .done-btn {
   border: none;
   background: none;
   cursor: pointer;
-  color: #555;
+  color: var(--muted);
+  vertical-align: middle;
+}
+
+.done-btn:hover {
+  color: #e5484d;
+}
+
+#done-count {
+  color: var(--muted);
+  margin-top: 0;
 }

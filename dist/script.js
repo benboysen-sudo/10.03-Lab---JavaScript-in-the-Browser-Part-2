@@ -39,4 +39,7 @@ function addTask(task) {
 function removeTask(event) {
     const li = event.target.parentNode;
     li.parentNode.removeChild(li);
+
+    const doneNum = document.querySelector("#done-num");
+    doneNum.textContent = Number(doneNum.textContent) + 1;
 }
